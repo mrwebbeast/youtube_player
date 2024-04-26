@@ -366,7 +366,10 @@ class _YoutubePlayerState extends State<YoutubePlayer> {
                                 ),
                                 RemainingDuration(),
                                 if (controller.flags.showPlaybackSpeedButton) const PlaybackSpeedButton(),
-                                if (controller.flags.showFullscreenButton) FullScreenButton(),
+                                if (controller.flags.showFullscreenButton)
+                                  FullScreenButton()
+                                else
+                                  const SizedBox(width: 14.0),
                               ],
                         ),
                       ),
